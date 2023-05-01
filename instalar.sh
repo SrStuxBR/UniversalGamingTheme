@@ -9,7 +9,7 @@ clear
 
 installTheme(){
     cd /var/www/
-    tar -cvf MinecraftPurpleThemebackup.tar.gz pterodactyl
+    tar -cvf UniversalGamingThemebackup.tar.gz pterodactyl
     echo "Instalando o tema..."
     cd /var/www/pterodactyl
     rm -r UniversalGamingTheme
@@ -37,17 +37,17 @@ installTheme(){
 
 installThemeQuestion(){
     while true; do
-        read -p "Tem certeza de que deseja instalar o tema [y/n]? " yn
+        read -p "Tem certeza que deseja instalar o tema [y/n]? " yn
         case $yn in
             [Yy]* ) installTheme; break;;
             [Nn]* ) exit;;
-            * ) echo "Por favor, responda y ou n.";;
+            * ) echo "Responda por favor yes ou no.";;
         esac
     done
 }
 
 repair(){
-    bash <(curl https://raw.githubusercontent.com/SrStuxBR/UniversalGamingTheme/main/reparar.sh)
+    bash <(curl https://raw.githubusercontent.com/SrStuxBR/UniversalGamingTheme/master/reparar.sh)
 }
 
 restoreBackUp(){
